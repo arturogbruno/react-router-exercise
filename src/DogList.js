@@ -13,7 +13,7 @@ class DogList extends Component {
                                 <img src={d.src} alt={d.name} />
                                 <h3>{d.name}</h3>
                             </div>
-                        ))};
+                        ))}
                     </div>
                 </div>
             </div>
