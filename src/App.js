@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Navbar from './Navbar';
 import DogList from './DogList';
 import DogDetails from './DogDetails';
 import whiskey from './images/whiskey.jpg';
@@ -52,6 +53,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Navbar dogs={this.props.dogs} />
         <Switch>
           <Route exact path="/dogs" render={() => <DogList dogs={this.props.dogs} /> } />
           <Route exact path="/dogs/:name" render={getDog} />
